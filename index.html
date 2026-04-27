@@ -1,117 +1,158 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>PILOT Entrepreneur</title>
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f5f7fa;
-}
-
-header {
-  background: linear-gradient(135deg, #1e3a8a, #4f46e5);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 18px;
-}
-
-button {
-  margin-top: 20px;
-  padding: 15px 30px;
-  background: #6366f1;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PILOT Entrepreneur | Pilotez votre entreprise sans effort</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
-  <h1>PILOT Entrepreneur</h1>
-  <p>Saisissez une seule fois. Toute votre entreprise est pilotée automatiquement.</p>
-  <button>Essai gratuit 30 jours</button>
-</header>
+    <script>
+        const STRIPE_URL = "https://ton-lien-stripe.com";
+        const DEMO_URL = "#";
+        const CONTACT_EMAIL = "contact@pilot.com";
+    </script>
 
-<section>
-  <h2>Pourquoi choisir PILOT ?</h2>
+    <div class="glow-overlay"></div>
 
-  <div class="features">
-    <div class="card">
-      <h3>🤖 Assistant IA</h3>
-      <p>Créez vos devis en quelques secondes.</p>
-    </div>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">PILOT <span>Entrepreneur</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#features">Fonctionnalités</a></li>
+                <li><a href="#pricing">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-cta-nav">Essai gratuit</a>
+        </div>
+    </nav>
 
-    <div class="card">
-      <h3>📊 Tableau de bord</h3>
-      <p>Visualisez toute votre activité en temps réel.</p>
-    </div>
+    <section id="hero" class="hero section">
+        <div class="container">
+            <div class="hero-text fade-in">
+                <h1>Pilotez votre entreprise <span class="text-gradient">sans effort.</span></h1>
+                <p>Saisissez une seule fois. Toute votre gestion s’automatise.</p>
+                <div class="hero-btns">
+                    <a href="#" class="btn btn-primary btn-stripe">Essai gratuit 30 jours</a>
+                    <a href="#" class="btn btn-secondary btn-demo">Voir la démo</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="images/dashboard.png" alt="Dashboard PILOT" onerror="this.src='https://via.placeholder.com/1000x600/1a1a2e/ffffff?text=Dashboard+Preview'">
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>💼 Comptabilité simplifiée</h3>
-      <p>Exportez vos données en 1 clic.</p>
-    </div>
+    <section id="features" class="features section">
+        <div class="container">
+            <h2 class="section-title">Tout ce dont vous avez besoin</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h3>Assistant IA</h3>
+                    <p>Anticipez vos besoins grâce à une intelligence prédictive.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Comptabilité simplifiée</h3>
+                    <p>Générez vos documents comptables en un clic.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚀</div>
+                    <h3>Marketing automatique</h3>
+                    <p>Gagnez des clients pendant que vous dormez.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🖥️</div>
+                    <h3>Tableau de bord</h3>
+                    <p>Une vision claire sur votre rentabilité en temps réel.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">❤️</div>
+                    <h3>Santé entreprise</h3>
+                    <p>Indicateurs clés pour éviter les mauvaises surprises.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🛠️</div>
+                    <h3>Suivi interventions</h3>
+                    <p>Gérez vos missions techniques sans aucun oubli.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>📢 Marketing automatique</h3>
-      <p>Publiez sur vos réseaux en quelques clics.</p>
-    </div>
+    <section id="value" class="value section">
+        <div class="container value-content">
+            <div class="value-text">
+                <h2>Un outil. <span class="text-gradient">Zéro perte de temps.</span></h2>
+                <ul class="value-list">
+                    <li><strong>Une seule saisie :</strong> Tout se met à jour instantanément.</li>
+                    <li><strong>Gain de temps :</strong> Divisez par 3 votre temps administratif.</li>
+                    <li><strong>Moins d’erreurs :</strong> Automatisation complète des calculs.</li>
+                    <li><strong>Vision globale :</strong> Gardez le contrôle sur chaque euro.</li>
+                </ul>
+            </div>
+            <div class="value-img-container">
+                <img src="images/value-visual.png" alt="Efficacité" onerror="this.src='https://via.placeholder.com/500x400/1a1a2e/ffffff?text=Efficacité+SaaS'">
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>📈 Santé de l’entreprise</h3>
-      <p>Analysez vos performances facilement.</p>
-    </div>
+    <section id="pricing" class="pricing section">
+        <div class="container">
+            <div class="pricing-card">
+                <span class="badge">Offre Unique</span>
+                <h3>Pilot Pro</h3>
+                <div class="price">29€<span>/mois</span></div>
+                <p>30 jours gratuits • Sans engagement</p>
+                <ul class="pricing-features">
+                    <li>✓ Accès complet à tous les modules</li>
+                    <li>✓ Support prioritaire</li>
+                    <li>✓ Mises à jour illimitées</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-stripe">Commencer gratuitement</a>
+                <p class="subtext">Annulation en 1 clic</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <h3>⚙️ Automatisation totale</h3>
-      <p>Une seule saisie → tout se met à jour.</p>
-    </div>
-  </div>
-</section>
+    <section id="trust" class="trust section">
+        <div class="container grid-3">
+            <div class="trust-item">
+                <h4>Données sécurisées</h4>
+                <p>Chiffrement de bout en bout pour vos données sensibles.</p>
+            </div>
+            <div class="trust-item">
+                <h4>Conforme</h4>
+                <p>Facturation électronique et archivage légal inclus.</p>
+            </div>
+            <div class="trust-item">
+                <h4>Évolutif</h4>
+                <p>La solution grandit avec votre entreprise.</p>
+            </div>
+        </div>
+    </section>
 
-<section style="text-align:center;">
-  <h2>Prêt à gagner du temps ?</h2>
-  <button>Commencer gratuitement</button>
-</section>
+    <section id="contact" class="cta-final section">
+        <div class="container">
+            <h2>Arrêtez de subir votre gestion. <br><span class="text-gradient">Reprenez le contrôle.</span></h2>
+            <div class="cta-form">
+                <input type="email" placeholder="votre@email.com">
+                <a href="#" class="btn btn-primary btn-stripe">Commencer gratuitement</a>
+            </div>
+            <p>Besoin d'aide ? <a href="mailto:contact@pilot.com" id="email-link">Contactez-nous</a></p>
+        </div>
+    </section>
 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 PILOT Entrepreneur. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
